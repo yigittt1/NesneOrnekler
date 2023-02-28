@@ -1,0 +1,10 @@
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\bin\Debug\U4_Uyg11.exe.config
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\bin\Debug\U4_Uyg11.exe
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\bin\Debug\U4_Uyg11.pdb
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\obj\Debug\U4_Uyg11.csproj.AssemblyReference.cache
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\obj\Debug\U4_Uyg11.Form1.resources
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\obj\Debug\U4_Uyg11.Properties.Resources.resources
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\obj\Debug\U4_Uyg11.csproj.GenerateResource.cache
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\obj\Debug\U4_Uyg11.csproj.CoreCompileInputs.cache
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\obj\Debug\U4_Uyg11.exe
+C:\Users\Ogrenci\Desktop\NesneOrnekler\U4_Uyg11\obj\Debug\U4_Uyg11.pdb
