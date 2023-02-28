@@ -16,5 +16,28 @@ namespace U4_Uyg8
         {
             InitializeComponent();
         }
+        byte[,] dizi = new byte[4, 4];
+        private void button1_Click(object sender, EventArgs e)
+        {
+            byte satir = byte.Parse(textBox1.Text);
+            byte sutun = byte.Parse(textBox2.Text);
+            PictureBox kutu = this.Controls.Find("p" + satir + sutun, true)[0] as PictureBox;
+            byte durum = dizi[satir, sutun];
+            if (durum == 0)
+            {
+                { kutu.BackColor = Color.Green; }
+            }
+            else
+            {
+                { kutu.BackColor = Color.Red; }
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            int satirRastgele = r.Next(4);
+            int sutunRastgele = r.Next(4);
+            dizi[satirRastgele, sutunRastgele] = 1;
+        }
     }
 }
