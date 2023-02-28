@@ -20,26 +20,8 @@ namespace U4_Uyg1
         int index = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            try
-            {
-                isimler[index] = textBox1.Text;
-                index++;
-            }
-            catch (IndexOutOfRangeException)
-            {
-                MessageBox.Show("yavaşş   ");
-            }
-            catch(FormatException)
-            {
-                MessageBox.Show("bir harf giriniz ");
-            }
-            textBox1.Clear();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Add(textBox1.Text);
+            isimler[index] = textBox1.Text;
+            index++;
         }
     }
 }
