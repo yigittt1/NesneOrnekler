@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20CFDD1A-BABD-4010-AEED-868FCA3C77A3}</ProjectGuid>
+    <ProjectGuid>{5829BA58-034A-47C1-A36B-00254692ACE9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>U5_Uyg25</RootNamespace>
     <AssemblyName>U5_Uyg25</AssemblyName>

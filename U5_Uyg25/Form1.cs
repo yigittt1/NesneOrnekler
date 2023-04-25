@@ -12,16 +12,10 @@ namespace U5_Uyg25
 {
     public partial class Form1 : Form
     {
-        DataTable tablo = new DataTable();
-        private void Bagla()
-        {
-
-        }
+        
         public Form1()
         {
-            tablo.Columns.Add("Numara", typeof(int));
-            tablo.Columns.Add("Ad Soyad", typeof(string));
-            tablo.Columns.Add("Notu", typeof(int));
+            gridListe.DataSource = tablo;
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -33,5 +27,18 @@ namespace U5_Uyg25
             Bagla();
         }
 
+        private void Bagla()
+        {
+            throw new NotImplementedException();
+        }
+
+        DataTable tablo = new DataTable();
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            tablo.Columns.Add("Numara", typeof(int));
+            tablo.Columns.Add("Ad Soyad", typeof(string));
+            tablo.Columns.Add("Notu", typeof(int));
+        }
     }
 }
