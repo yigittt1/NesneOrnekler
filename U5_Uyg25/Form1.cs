@@ -13,6 +13,10 @@ namespace U5_Uyg25
     public partial class Form1 : Form
     {
         DataTable tablo = new DataTable();
+        private void Bagla()
+        {
+
+        }
         public Form1()
         {
             tablo.Columns.Add("Numara", typeof(int));
@@ -29,9 +33,5 @@ namespace U5_Uyg25
             Bagla();
         }
 
-        private void Bagla()
-        {
-            
-        }
     }
 }
