@@ -8,25 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace U5_Uyg24
+namespace U5_Uyg25
 {
     public partial class Form1 : Form
     {
-        List<Ogrenciler> liste = new List<Ogrenciler>();
-        private object gridListe;
-
+        DataTable tablo = new DataTable();
         public Form1()
         {
-            InitializeComponent();
+            tablo.Columns.Add("Numara", typeof(int));
+            tablo.Columns.Add("Ad Soyad", typeof(string));
+            tablo.Columns.Add("Notu", typeof(int));
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            Ogrenciler ogrenci = new Ogrenciler();
-            ogrenci.Numara = int.Parse(txtNumara.Text);
-            ogrenci.AdSoyad = txtAdSoyad.Text;
-            ogrenci.DersNotu = int.Parse(txtDersNotu.Text);
-            liste.Add(ogrenci);
+            int numara = int.Parse(txtNumara.Text);
+            string adsoyad = txtAdSoyad.Text;
+            int notu = int.Parse(txtDersNotu.Text);
+            tablo.Rows.Add(numara, adsoyad, notu);
             Bagla();
         }
 
