@@ -29,7 +29,7 @@ namespace U5_Uyg25
 
         private void Bagla()
         {
-            throw new NotImplementedException();
+            
         }
 
         DataTable tablo = new DataTable();
