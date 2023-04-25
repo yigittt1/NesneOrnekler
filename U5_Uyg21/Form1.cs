@@ -22,5 +22,10 @@ namespace U5_Uyg21
             string [] diller = { "C#”, “Java”, “Python”,”Delphi" };
             listeVeriler.DataSource = diller;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
