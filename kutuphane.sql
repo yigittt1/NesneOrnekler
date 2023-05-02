@@ -1,0 +1,1 @@
+UPDATE personel SET maas=maas+(maas*25/100) WHERE departman ="Yazılım Geliştirme"
