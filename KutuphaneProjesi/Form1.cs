@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KutuphaneProjesi
 {
-    public partial class Form1 : Form
+    public partial class FormAnaSayfa : Form
     {
-        public Form1()
+        public FormAnaSayfa()
         {
             InitializeComponent();
         }
