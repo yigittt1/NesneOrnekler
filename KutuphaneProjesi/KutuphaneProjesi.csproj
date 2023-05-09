@@ -54,6 +54,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formKitap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formKitap.Designer.cs">
+      <DependentUpon>formKitap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formKitapTur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formKitapTur.Designer.cs">
+      <DependentUpon>formKitapTur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formOduncKitap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formOduncKitap.Designer.cs">
+      <DependentUpon>formOduncKitap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formOgrenci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formOgrenci.Designer.cs">
+      <DependentUpon>formOgrenci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeriTabanİslemleri.cs" />
