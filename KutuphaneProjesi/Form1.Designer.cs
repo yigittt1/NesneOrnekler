@@ -38,6 +38,7 @@ namespace KutuphaneProjesi
             // 
             // btnKitap
             // 
+            this.btnKitap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnKitap.Image = ((System.Drawing.Image)(resources.GetObject("btnKitap.Image")));
             this.btnKitap.Location = new System.Drawing.Point(34, 45);
             this.btnKitap.Name = "btnKitap";
@@ -45,11 +46,12 @@ namespace KutuphaneProjesi
             this.btnKitap.TabIndex = 0;
             this.btnKitap.Text = "Kitap İşlemleri";
             this.btnKitap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnKitap.UseVisualStyleBackColor = true;
+            this.btnKitap.UseVisualStyleBackColor = false;
             this.btnKitap.Click += new System.EventHandler(this.btnKitap_Click);
             // 
             // btnOgrenci
             // 
+            this.btnOgrenci.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnOgrenci.Image = ((System.Drawing.Image)(resources.GetObject("btnOgrenci.Image")));
             this.btnOgrenci.Location = new System.Drawing.Point(228, 45);
             this.btnOgrenci.Name = "btnOgrenci";
@@ -57,11 +59,12 @@ namespace KutuphaneProjesi
             this.btnOgrenci.TabIndex = 1;
             this.btnOgrenci.Text = "Öğrenci İşlemleri";
             this.btnOgrenci.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOgrenci.UseVisualStyleBackColor = true;
+            this.btnOgrenci.UseVisualStyleBackColor = false;
             this.btnOgrenci.Click += new System.EventHandler(this.btnOgrenci_Click);
             // 
             // btnTur
             // 
+            this.btnTur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTur.Image = ((System.Drawing.Image)(resources.GetObject("btnTur.Image")));
             this.btnTur.Location = new System.Drawing.Point(34, 136);
             this.btnTur.Name = "btnTur";
@@ -69,11 +72,12 @@ namespace KutuphaneProjesi
             this.btnTur.TabIndex = 2;
             this.btnTur.Text = "Tür İşlemleri";
             this.btnTur.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTur.UseVisualStyleBackColor = true;
+            this.btnTur.UseVisualStyleBackColor = false;
             this.btnTur.Click += new System.EventHandler(this.btnTur_Click);
             // 
             // btnOdunc
             // 
+            this.btnOdunc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnOdunc.Image = ((System.Drawing.Image)(resources.GetObject("btnOdunc.Image")));
             this.btnOdunc.Location = new System.Drawing.Point(228, 136);
             this.btnOdunc.Name = "btnOdunc";
@@ -81,19 +85,21 @@ namespace KutuphaneProjesi
             this.btnOdunc.TabIndex = 3;
             this.btnOdunc.Text = "Ödünç Kitap İşlemleri";
             this.btnOdunc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOdunc.UseVisualStyleBackColor = true;
+            this.btnOdunc.UseVisualStyleBackColor = false;
             this.btnOdunc.Click += new System.EventHandler(this.btnOdunc_Click);
             // 
             // FormAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(434, 261);
             this.Controls.Add(this.btnOdunc);
             this.Controls.Add(this.btnTur);
             this.Controls.Add(this.btnOgrenci);
             this.Controls.Add(this.btnKitap);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kütüphane Projesi";
