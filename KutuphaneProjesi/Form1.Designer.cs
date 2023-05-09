@@ -46,6 +46,7 @@ namespace KutuphaneProjesi
             this.btnKitap.TabIndex = 0;
             this.btnKitap.Text = "Kitap İşlemleri";
             this.btnKitap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnKitap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnKitap.UseVisualStyleBackColor = false;
             this.btnKitap.Click += new System.EventHandler(this.btnKitap_Click);
             // 
@@ -59,6 +60,7 @@ namespace KutuphaneProjesi
             this.btnOgrenci.TabIndex = 1;
             this.btnOgrenci.Text = "Öğrenci İşlemleri";
             this.btnOgrenci.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOgrenci.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOgrenci.UseVisualStyleBackColor = false;
             this.btnOgrenci.Click += new System.EventHandler(this.btnOgrenci_Click);
             // 
@@ -72,6 +74,7 @@ namespace KutuphaneProjesi
             this.btnTur.TabIndex = 2;
             this.btnTur.Text = "Tür İşlemleri";
             this.btnTur.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTur.UseVisualStyleBackColor = false;
             this.btnTur.Click += new System.EventHandler(this.btnTur_Click);
             // 
@@ -85,6 +88,7 @@ namespace KutuphaneProjesi
             this.btnOdunc.TabIndex = 3;
             this.btnOdunc.Text = "Ödünç Kitap İşlemleri";
             this.btnOdunc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOdunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOdunc.UseVisualStyleBackColor = false;
             this.btnOdunc.Click += new System.EventHandler(this.btnOdunc_Click);
             // 
