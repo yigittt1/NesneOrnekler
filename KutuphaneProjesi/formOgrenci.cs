@@ -47,7 +47,40 @@ namespace KutuphaneProjesi
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (baglanti.State != ConnectionState.Open)
+                {
+                    baglanti.Open();
+                }
+                komutSatiri = "INSERT INTO ogrenciler (ogrenci_no,ad,soyad,sinif,cinsiyet,telefon) VALUES(@no,@ad,@soyad,@sinif,@cinsiyet,@telefon)";
+                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut.Parameters.AddWithValue("@no", int.Parse(txtNo.Text));
+                komut.Parameters.AddWithValue("@ad", txtAd.Text);
+                komut.Parameters.AddWithValue("@soyad", txtSoyad.Text);
+                komut.Parameters.AddWithValue("@sinif", int.Parse(comboSinif.SelectedItem.ToString())); 
+                komut.Parameters.AddWithValue("@cinsiyet", comboCinsiyet.SelectedItem.ToString());
+                komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
 
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                Temizle();
+                MessageBox.Show("İşlem başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Listele();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Temizle()
+        {
+            txtAd.Clear();
+            txtSoyad.Clear();
+            txtNo.Clear();
+            txtTelefon.Clear();
         }
     }
 }

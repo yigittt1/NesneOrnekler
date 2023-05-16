@@ -32,18 +32,18 @@ namespace KutuphaneProjesi
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formOgrenci));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.comboCinsiyet = new System.Windows.Forms.ComboBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboSinif = new System.Windows.Forms.ComboBox();
+            this.txtNo = new System.Windows.Forms.TextBox();
             this.gridOgrenci = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -61,18 +61,18 @@ namespace KutuphaneProjesi
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtTelefon);
+            this.groupBox1.Controls.Add(this.txtSoyad);
+            this.groupBox1.Controls.Add(this.comboCinsiyet);
+            this.groupBox1.Controls.Add(this.txtAd);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.comboSinif);
+            this.groupBox1.Controls.Add(this.txtNo);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(630, 84);
@@ -80,37 +80,37 @@ namespace KutuphaneProjesi
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bilgi Girişi";
             // 
-            // textBox4
+            // txtTelefon
             // 
-            this.textBox4.Location = new System.Drawing.Point(471, 48);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 10;
+            this.txtTelefon.Location = new System.Drawing.Point(471, 48);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(121, 20);
+            this.txtTelefon.TabIndex = 10;
             // 
-            // textBox3
+            // txtSoyad
             // 
-            this.textBox3.Location = new System.Drawing.Point(471, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 9;
+            this.txtSoyad.Location = new System.Drawing.Point(471, 19);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(121, 20);
+            this.txtSoyad.TabIndex = 9;
             // 
-            // comboBox2
+            // comboCinsiyet
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboCinsiyet.FormattingEnabled = true;
+            this.comboCinsiyet.Items.AddRange(new object[] {
             "Kız",
             "Erkek"});
-            this.comboBox2.Location = new System.Drawing.Point(267, 48);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 8;
+            this.comboCinsiyet.Location = new System.Drawing.Point(267, 48);
+            this.comboCinsiyet.Name = "comboCinsiyet";
+            this.comboCinsiyet.Size = new System.Drawing.Size(121, 21);
+            this.comboCinsiyet.TabIndex = 8;
             // 
-            // textBox2
+            // txtAd
             // 
-            this.textBox2.Location = new System.Drawing.Point(267, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtAd.Location = new System.Drawing.Point(267, 19);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(121, 20);
+            this.txtAd.TabIndex = 7;
             // 
             // label5
             // 
@@ -166,20 +166,20 @@ namespace KutuphaneProjesi
             this.label1.TabIndex = 2;
             this.label1.Text = "Okul No:";
             // 
-            // comboBox1
+            // comboSinif
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(66, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.comboSinif.FormattingEnabled = true;
+            this.comboSinif.Location = new System.Drawing.Point(66, 45);
+            this.comboSinif.Name = "comboSinif";
+            this.comboSinif.Size = new System.Drawing.Size(121, 21);
+            this.comboSinif.TabIndex = 1;
             // 
-            // textBox1
+            // txtNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNo.Location = new System.Drawing.Point(66, 19);
+            this.txtNo.Name = "txtNo";
+            this.txtNo.Size = new System.Drawing.Size(121, 20);
+            this.txtNo.TabIndex = 0;
             // 
             // gridOgrenci
             // 
@@ -265,6 +265,7 @@ namespace KutuphaneProjesi
             this.btnSil.Text = "Sil ";
             this.btnSil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -305,18 +306,18 @@ namespace KutuphaneProjesi
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.ComboBox comboCinsiyet;
+        private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboSinif;
+        private System.Windows.Forms.TextBox txtNo;
         private System.Windows.Forms.DataGridView gridOgrenci;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox5;
