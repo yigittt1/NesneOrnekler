@@ -60,7 +60,7 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komutSatiri = "INSERT INTO  ogrenciler ( ogrenci_no,ad,soyad,sinif,cinsiyet,telefon) VALUES@no,@ad,@soyad,@sinif,@cinsiyet,@telefon)";
+                komutSatiri = "INSERT INTO  ogrenciler ( ogrenci_no,ad,soyad,sinif,cinsiyet,telefon) VALUES(@no,@ad,@soyad,@sinif,@cinsiyet,@telefon)";
                 komut = new MySqlCommand(komutSatiri, baglanti);
                 komut.Parameters.AddWithValue("@no", int.Parse(txtNo.Text));
                 komut.Parameters.AddWithValue("@ad", (txtAd.Text));
