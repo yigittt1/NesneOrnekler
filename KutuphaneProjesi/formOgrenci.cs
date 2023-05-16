@@ -61,7 +61,6 @@ namespace KutuphaneProjesi
                 komut.Parameters.AddWithValue("@sinif", int.Parse(comboSinif.SelectedItem.ToString())); 
                 komut.Parameters.AddWithValue("@cinsiyet", comboCinsiyet.SelectedItem.ToString());
                 komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
-
                 komut.ExecuteNonQuery();
                 baglanti.Close();
                 Temizle();
