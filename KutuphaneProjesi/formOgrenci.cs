@@ -64,10 +64,10 @@ namespace KutuphaneProjesi
                 komut = new MySqlCommand(komutSatiri, baglanti);
                 komut.Parameters.AddWithValue("@no", int.Parse(txtNo.Text));
                 komut.Parameters.AddWithValue("@ad", (txtAd.Text));
-                komut.Parameters.AddWithValue("@soyad",(txtSoyad.Text));
+                komut.Parameters.AddWithValue("@soyad", (txtSoyad.Text));
                 komut.Parameters.AddWithValue("@sinif", int.Parse(comboSinif.SelectedItem.ToString()));
-                komut.Parameters.AddWithValue("@cinsiyet",(comboCinsiyet.SelectedItem.ToString()));
-                komut.Parameters.AddWithValue("@telefon",(txtTelefon.Text));
+                komut.Parameters.AddWithValue("@cinsiyet", (comboCinsiyet.SelectedItem.ToString()));
+                komut.Parameters.AddWithValue("@telefon", (txtTelefon.Text));
 
                 komut.ExecuteNonQuery();
                 baglanti.Close();
