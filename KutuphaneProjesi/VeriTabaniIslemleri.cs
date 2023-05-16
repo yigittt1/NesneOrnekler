@@ -1,14 +1,14 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace KutuphaneProjesi
 {
-    class VeriTabanİslemleri
+    class VeriTabaniIslemleri
     {
         string baglantiCumlesi = ConfigurationManager.ConnectionStrings["kutuphaneBaglantiCumlesi"].ConnectionString;
 
@@ -19,11 +19,5 @@ namespace KutuphaneProjesi
             MySqlConnection.ClearPool(baglanti);
             return baglanti;
         }
-
-
-
-
-
-
     }
 }

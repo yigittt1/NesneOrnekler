@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CC0EDAC-107B-4921-A979-5871B23BA938}</ProjectGuid>
+    <ProjectGuid>{1BEF3758-74D4-4F1F-A971-60B7487DD7B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>KutuphaneProjesi</RootNamespace>
     <AssemblyName>KutuphaneProjesi</AssemblyName>
@@ -80,7 +80,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VeriTabanİslemleri.cs" />
+    <Compile Include="VeriTabaniIslemleri.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

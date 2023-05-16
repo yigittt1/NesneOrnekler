@@ -1,7 +1,7 @@
 ﻿
 namespace KutuphaneProjesi
 {
-    partial class FormAnaSayfa
+    partial class formAnaSayfa
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace KutuphaneProjesi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAnaSayfa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAnaSayfa));
             this.btnKitap = new System.Windows.Forms.Button();
             this.btnOgrenci = new System.Windows.Forms.Button();
             this.btnTur = new System.Windows.Forms.Button();
@@ -38,75 +38,70 @@ namespace KutuphaneProjesi
             // 
             // btnKitap
             // 
-            this.btnKitap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKitap.Image = ((System.Drawing.Image)(resources.GetObject("btnKitap.Image")));
-            this.btnKitap.Location = new System.Drawing.Point(34, 45);
+            this.btnKitap.Location = new System.Drawing.Point(31, 32);
             this.btnKitap.Name = "btnKitap";
             this.btnKitap.Size = new System.Drawing.Size(170, 75);
             this.btnKitap.TabIndex = 0;
             this.btnKitap.Text = "Kitap İşlemleri";
             this.btnKitap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnKitap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnKitap.UseVisualStyleBackColor = false;
+            this.btnKitap.UseVisualStyleBackColor = true;
             this.btnKitap.Click += new System.EventHandler(this.btnKitap_Click);
             // 
             // btnOgrenci
             // 
-            this.btnOgrenci.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOgrenci.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOgrenci.Image = ((System.Drawing.Image)(resources.GetObject("btnOgrenci.Image")));
-            this.btnOgrenci.Location = new System.Drawing.Point(228, 45);
+            this.btnOgrenci.Location = new System.Drawing.Point(230, 32);
             this.btnOgrenci.Name = "btnOgrenci";
             this.btnOgrenci.Size = new System.Drawing.Size(170, 75);
             this.btnOgrenci.TabIndex = 1;
             this.btnOgrenci.Text = "Öğrenci İşlemleri";
             this.btnOgrenci.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOgrenci.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnOgrenci.UseVisualStyleBackColor = false;
+            this.btnOgrenci.UseVisualStyleBackColor = true;
             this.btnOgrenci.Click += new System.EventHandler(this.btnOgrenci_Click);
             // 
             // btnTur
             // 
-            this.btnTur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTur.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTur.Image = ((System.Drawing.Image)(resources.GetObject("btnTur.Image")));
-            this.btnTur.Location = new System.Drawing.Point(34, 136);
+            this.btnTur.Location = new System.Drawing.Point(31, 136);
             this.btnTur.Name = "btnTur";
             this.btnTur.Size = new System.Drawing.Size(170, 75);
             this.btnTur.TabIndex = 2;
             this.btnTur.Text = "Tür İşlemleri";
             this.btnTur.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTur.UseVisualStyleBackColor = false;
+            this.btnTur.UseVisualStyleBackColor = true;
             this.btnTur.Click += new System.EventHandler(this.btnTur_Click);
             // 
             // btnOdunc
             // 
-            this.btnOdunc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOdunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdunc.Image = ((System.Drawing.Image)(resources.GetObject("btnOdunc.Image")));
-            this.btnOdunc.Location = new System.Drawing.Point(228, 136);
+            this.btnOdunc.Location = new System.Drawing.Point(230, 136);
             this.btnOdunc.Name = "btnOdunc";
             this.btnOdunc.Size = new System.Drawing.Size(170, 75);
             this.btnOdunc.TabIndex = 3;
             this.btnOdunc.Text = "Ödünç Kitap İşlemleri";
             this.btnOdunc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOdunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnOdunc.UseVisualStyleBackColor = false;
+            this.btnOdunc.UseVisualStyleBackColor = true;
             this.btnOdunc.Click += new System.EventHandler(this.btnOdunc_Click);
             // 
-            // FormAnaSayfa
+            // formAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(434, 261);
             this.Controls.Add(this.btnOdunc);
             this.Controls.Add(this.btnTur);
             this.Controls.Add(this.btnOgrenci);
             this.Controls.Add(this.btnKitap);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormAnaSayfa";
+            this.Name = "formAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kütüphane Projesi";
+            this.Text = "Kütühane Projesi";
             this.ResumeLayout(false);
 
         }
