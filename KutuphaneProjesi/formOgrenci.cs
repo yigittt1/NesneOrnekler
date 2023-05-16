@@ -83,20 +83,21 @@ namespace KutuphaneProjesi
             txtTelefon.Clear();
         }
 
-        private void btnSil_Click(object sender, EventArgs e)
+        private void gridOgrenci_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 txtNo.Text = gridOgrenci.CurrentRow.Cells["ogrenci_no"].Value.ToString();
-                txtNo.Text = gridOgrenci.CurrentRow.Cells["ad"].Value.ToString();
-                txtNo.Text = gridOgrenci.CurrentRow.Cells["soyad"].Value.ToString();
-                txtNo.Text = gridOgrenci.CurrentRow.Cells["sinif"].Value.ToString();
-                txtNo.Text = gridOgrenci.CurrentRow.Cells["cinsiyet"].Value.ToString();
+                txtAd.Text = gridOgrenci.CurrentRow.Cells["ad"].Value.ToString();
+                txtSoyad.Text = gridOgrenci.CurrentRow.Cells["soyad"].Value.ToString();
+                txtTelefon.Text = gridOgrenci.CurrentRow.Cells["telefon"].Value.ToString();
+                comboSinif.SelectedItem = gridOgrenci.CurrentRow.Cells["sinif"].Value.ToString();
+                comboSinif.SelectedItem = gridOgrenci.CurrentRow.Cells["cinsiyet"].Value.ToString();
 
             }
             catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hata Oluştu", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

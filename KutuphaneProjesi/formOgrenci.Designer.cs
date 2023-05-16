@@ -191,6 +191,7 @@ namespace KutuphaneProjesi
             this.gridOgrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridOgrenci.Size = new System.Drawing.Size(630, 125);
             this.gridOgrenci.TabIndex = 1;
+            this.gridOgrenci.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridOgrenci_CellClick);
             // 
             // groupBox2
             // 
@@ -265,7 +266,6 @@ namespace KutuphaneProjesi
             this.btnSil.Text = "Sil ";
             this.btnSil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
