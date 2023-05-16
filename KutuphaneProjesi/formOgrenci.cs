@@ -82,5 +82,22 @@ namespace KutuphaneProjesi
             txtNo.Clear();
             txtTelefon.Clear();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtNo.Text = gridOgrenci.CurrentRow.Cells["ogrenci_no"].Value.ToString();
+                txtNo.Text = gridOgrenci.CurrentRow.Cells["ad"].Value.ToString();
+                txtNo.Text = gridOgrenci.CurrentRow.Cells["soyad"].Value.ToString();
+                txtNo.Text = gridOgrenci.CurrentRow.Cells["sinif"].Value.ToString();
+                txtNo.Text = gridOgrenci.CurrentRow.Cells["cinsiyet"].Value.ToString();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
