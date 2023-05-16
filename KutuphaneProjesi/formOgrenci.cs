@@ -100,5 +100,57 @@ namespace KutuphaneProjesi
                 MessageBox.Show("Hata Oluştu", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (baglanti.State != ConnectionState.Open)
+                {
+                    baglanti.Open();
+                }
+                komutSatiri = "DELETE FROM ogrenciler WHERE ogrenci_no = @no";
+                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut.Parameters.AddWithValue("@no", gridOgrenci.CurrentRow.Cells["ogrenci_no"].Value.ToString());
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                Temizle();
+                MessageBox.Show("İşlem başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Listele();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (baglanti.State != ConnectionState.Open)
+                {
+                    baglanti.Open();
+                }
+                komutSatiri = "UPDATE ogrenciler SET (ogrenci_no,ad,soyad,sinif,cinsiyet,telefon) VALUES(@no,@ad,@soyad,@sinif,@cinsiyet,@telefon)";
+                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut.Parameters.AddWithValue("@no", int.Parse(gridOgrenci.CurrentRow.Cells["ogrenci_no"].Value.ToString()));
+                komut.Parameters.AddWithValue("@ad", txtAd.Text);
+                komut.Parameters.AddWithValue("@soyad", txtSoyad.Text);
+                komut.Parameters.AddWithValue("@sinif", int.Parse(comboSinif.SelectedItem.ToString()));
+                komut.Parameters.AddWithValue("@cinsiyet", comboCinsiyet.SelectedItem.ToString());
+                komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                Temizle();
+                MessageBox.Show("İşlem başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Listele();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

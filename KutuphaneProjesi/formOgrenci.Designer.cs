@@ -266,6 +266,7 @@ namespace KutuphaneProjesi
             this.btnSil.Text = "Sil ";
             this.btnSil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -279,6 +280,7 @@ namespace KutuphaneProjesi
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // formOgrenci
             // 
