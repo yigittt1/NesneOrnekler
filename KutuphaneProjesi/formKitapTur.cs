@@ -53,7 +53,7 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komut = new MySqlCommand();
+                komut = new MySqlCommand(komutSatiri, baglanti);
                 komut.Connection = baglanti;
                 komut.CommandText = "INSERT INTO kitap_turleri (tur_adi VALUES (@tur_adi)";
                 komut.Parameters.AddWithValue("@tur_adi", txtTurAdi.Text);
@@ -73,7 +73,7 @@ namespace KutuphaneProjesi
         {
             try
             {
-
+                txtTurAdi.Text = gridKitapTur.CurrentRow.Cells["tur_adi"].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -89,21 +89,50 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komut = new MySqlCommand();
-                komut.Connection = baglanti;
-                komut.CommandText = "DELETE FROM kitap_turleri WHERE tur_id = @tur_id";
+                komutSatiri = "DELETE FROM kitap_turleri WHERE tur_id = @tur_id";
+                komut = new MySqlCommand(komutSatiri, baglanti);
 
-                komut.Parameters.AddWithValue("@tur_adi", gridKitapTur.CurrentRow.Cells["tur_id"].Value.ToString());
+                komut.Parameters.AddWithValue("@tur_id", gridKitapTur.CurrentRow.Cells["tur_id"].Value.ToString());
                 komut.ExecuteNonQuery();
                 baglanti.Close();
                 txtTurAdi.Clear();
-                MessageBox.Show("İşlem başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 TurleriListele();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (baglanti.State != ConnectionState.Open)
+                {
+                    baglanti.Open();
+                }
+                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut.Connection = baglanti;
+                komut.CommandText = "UPDATE kitap_turleri SET tur_adi=@tur_adi where tur_id=@tur_id";
+
+                komut.Parameters.AddWithValue("@tur_id", int.Parse (gridKitapTur.CurrentRow.Cells["tur_id"].Value.ToString()));
+                komut.Parameters.AddWithValue("@tur_adi", txtTurAdi.Text);
+
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                txtTurAdi.Clear();
+
+                MessageBox.Show("İşlem başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                TurleriListele();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
     }
 }
