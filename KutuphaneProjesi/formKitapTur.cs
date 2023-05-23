@@ -13,6 +13,11 @@ namespace KutuphaneProjesi
 {
     public partial class formKitapTur : Form
     {
+        public formKitapTur()
+        {
+            InitializeComponent();
+        }
+
         VeriTabaniIslemleri vtIslemleri = new VeriTabaniIslemleri();
         MySqlConnection baglanti;
         MySqlCommand komut;
