@@ -29,6 +29,7 @@ namespace KutuphaneProjesi
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formKitapTur));
             this.txtTurAdi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -38,6 +39,7 @@ namespace KutuphaneProjesi
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.gridKitapTur = new System.Windows.Forms.DataGridView();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridKitapTur)).BeginInit();
@@ -84,19 +86,24 @@ namespace KutuphaneProjesi
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKaydet.ImageKey = "kaydet.jpg";
+            this.btnKaydet.ImageList = this.ımageList1;
             this.btnKaydet.Location = new System.Drawing.Point(59, 19);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(89, 40);
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnSil
             // 
-            this.btnSil.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.Image")));
-            this.btnSil.Location = new System.Drawing.Point(165, 19);
+            this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSil.ImageIndex = 1;
+            this.btnSil.ImageList = this.ımageList1;
+            this.btnSil.Location = new System.Drawing.Point(167, 19);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(89, 40);
             this.btnSil.TabIndex = 4;
@@ -106,12 +113,15 @@ namespace KutuphaneProjesi
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Image")));
+            this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuncelle.ImageIndex = 2;
+            this.btnGuncelle.ImageList = this.ımageList1;
             this.btnGuncelle.Location = new System.Drawing.Point(273, 19);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(89, 40);
             this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
@@ -127,15 +137,24 @@ namespace KutuphaneProjesi
             this.gridKitapTur.TabIndex = 2;
             this.gridKitapTur.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridKitapTur_CellClick);
             // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "kaydet.jpg");
+            this.ımageList1.Images.SetKeyName(1, "sil.png");
+            this.ımageList1.Images.SetKeyName(2, "guncelle.jpg");
+            // 
             // formKitapTur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(434, 293);
             this.Controls.Add(this.gridKitapTur);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "formKitapTur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kitap Tür İşlemleri";
@@ -158,5 +177,6 @@ namespace KutuphaneProjesi
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.ImageList ımageList1;
     }
 }
