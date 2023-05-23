@@ -86,6 +86,7 @@ namespace KutuphaneProjesi
             // 
             // btnKaydet
             // 
+            this.btnKaydet.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKaydet.ImageKey = "kaydet.jpg";
             this.btnKaydet.ImageList = this.ımageList1;
@@ -95,11 +96,12 @@ namespace KutuphaneProjesi
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnSil
             // 
+            this.btnSil.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSil.ImageIndex = 1;
             this.btnSil.ImageList = this.ımageList1;
@@ -108,11 +110,12 @@ namespace KutuphaneProjesi
             this.btnSil.Size = new System.Drawing.Size(89, 40);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
+            this.btnGuncelle.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuncelle.ImageIndex = 2;
             this.btnGuncelle.ImageList = this.ımageList1;
@@ -122,7 +125,7 @@ namespace KutuphaneProjesi
             this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // gridKitapTur
