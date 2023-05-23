@@ -79,7 +79,6 @@ namespace KutuphaneProjesi
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bilgi Girişi";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // comboSinif
             // 
@@ -197,7 +196,6 @@ namespace KutuphaneProjesi
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Arama";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label7
             // 
@@ -227,7 +225,6 @@ namespace KutuphaneProjesi
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İşlemleri";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // btnGuncelle
             // 
@@ -293,7 +290,6 @@ namespace KutuphaneProjesi
             this.gridOgrenci.Size = new System.Drawing.Size(616, 248);
             this.gridOgrenci.TabIndex = 17;
             this.gridOgrenci.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridOgrenci_CellClick);
-            this.gridOgrenci.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridOgrenci_CellContentClick);
             // 
             // formOgrenci
             // 
