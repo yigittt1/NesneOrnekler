@@ -30,19 +30,19 @@ namespace KutuphaneProjesi
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtAciklama = new System.Windows.Forms.TextBox();
-            this.comboKitap = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtNo = new System.Windows.Forms.TextBox();
+            this.comboKitap = new System.Windows.Forms.ComboBox();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtAramaOgrenci = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnKitapVer = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
             this.btnKitapAl = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnKitapVer = new System.Windows.Forms.Button();
             this.gridOduncKitaplar = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,6 +65,56 @@ namespace KutuphaneProjesi
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bilgi Girişi";
             // 
+            // txtNo
+            // 
+            this.txtNo.Location = new System.Drawing.Point(137, 17);
+            this.txtNo.Name = "txtNo";
+            this.txtNo.Size = new System.Drawing.Size(121, 20);
+            this.txtNo.TabIndex = 6;
+            // 
+            // comboKitap
+            // 
+            this.comboKitap.FormattingEnabled = true;
+            this.comboKitap.Location = new System.Drawing.Point(137, 62);
+            this.comboKitap.Name = "comboKitap";
+            this.comboKitap.Size = new System.Drawing.Size(121, 21);
+            this.comboKitap.TabIndex = 5;
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(474, 16);
+            this.txtAciklama.Multiline = true;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(271, 67);
+            this.txtAciklama.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(403, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Açıklama:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Kitap Adı:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Öğrenci No:";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtAramaOgrenci);
@@ -76,48 +126,13 @@ namespace KutuphaneProjesi
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ödünç Kitap Arama";
             // 
-            // label1
+            // txtAramaOgrenci
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Öğrenci No:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Kitap Adı:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(403, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Açıklama:";
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.Location = new System.Drawing.Point(474, 16);
-            this.txtAciklama.Multiline = true;
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(271, 67);
-            this.txtAciklama.TabIndex = 3;
-            // 
-            // comboKitap
-            // 
-            this.comboKitap.FormattingEnabled = true;
-            this.comboKitap.Location = new System.Drawing.Point(137, 62);
-            this.comboKitap.Name = "comboKitap";
-            this.comboKitap.Size = new System.Drawing.Size(121, 21);
-            this.comboKitap.TabIndex = 5;
+            this.txtAramaOgrenci.Location = new System.Drawing.Point(137, 38);
+            this.txtAramaOgrenci.Name = "txtAramaOgrenci";
+            this.txtAramaOgrenci.Size = new System.Drawing.Size(121, 20);
+            this.txtAramaOgrenci.TabIndex = 7;
+            this.txtAramaOgrenci.TextChanged += new System.EventHandler(this.txtAramaOgrenci_TextChanged);
             // 
             // label4
             // 
@@ -127,21 +142,6 @@ namespace KutuphaneProjesi
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Öğrenci Adı:";
-            // 
-            // txtNo
-            // 
-            this.txtNo.Location = new System.Drawing.Point(137, 17);
-            this.txtNo.Name = "txtNo";
-            this.txtNo.Size = new System.Drawing.Size(121, 20);
-            this.txtNo.TabIndex = 6;
-            // 
-            // txtAramaOgrenci
-            // 
-            this.txtAramaOgrenci.Location = new System.Drawing.Point(137, 38);
-            this.txtAramaOgrenci.Name = "txtAramaOgrenci";
-            this.txtAramaOgrenci.Size = new System.Drawing.Size(121, 20);
-            this.txtAramaOgrenci.TabIndex = 7;
-            this.txtAramaOgrenci.TextChanged += new System.EventHandler(this.txtAramaOgrenci_TextChanged);
             // 
             // groupBox3
             // 
@@ -155,35 +155,35 @@ namespace KutuphaneProjesi
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İşlemler";
             // 
-            // btnKitapVer
+            // btnKitapAl
             // 
-            this.btnKitapVer.Location = new System.Drawing.Point(21, 18);
-            this.btnKitapVer.Name = "btnKitapVer";
-            this.btnKitapVer.Size = new System.Drawing.Size(75, 59);
-            this.btnKitapVer.TabIndex = 0;
-            this.btnKitapVer.Text = "Kitap Ver";
-            this.btnKitapVer.UseVisualStyleBackColor = true;
-            this.btnKitapVer.Click += new System.EventHandler(this.btnKitapVer_Click);
+            this.btnKitapAl.Location = new System.Drawing.Point(260, 28);
+            this.btnKitapAl.Name = "btnKitapAl";
+            this.btnKitapAl.Size = new System.Drawing.Size(88, 39);
+            this.btnKitapAl.TabIndex = 2;
+            this.btnKitapAl.Text = "Kitap Al";
+            this.btnKitapAl.UseVisualStyleBackColor = true;
+            this.btnKitapAl.Click += new System.EventHandler(this.btnKitapAl_Click);
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(155, 18);
+            this.btnSil.Location = new System.Drawing.Point(154, 28);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 59);
+            this.btnSil.Size = new System.Drawing.Size(83, 39);
             this.btnSil.TabIndex = 1;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
-            // btnKitapAl
+            // btnKitapVer
             // 
-            this.btnKitapAl.Location = new System.Drawing.Point(282, 18);
-            this.btnKitapAl.Name = "btnKitapAl";
-            this.btnKitapAl.Size = new System.Drawing.Size(75, 59);
-            this.btnKitapAl.TabIndex = 2;
-            this.btnKitapAl.Text = "Kitap Al";
-            this.btnKitapAl.UseVisualStyleBackColor = true;
-            this.btnKitapAl.Click += new System.EventHandler(this.btnKitapAl_Click);
+            this.btnKitapVer.Location = new System.Drawing.Point(44, 29);
+            this.btnKitapVer.Name = "btnKitapVer";
+            this.btnKitapVer.Size = new System.Drawing.Size(85, 38);
+            this.btnKitapVer.TabIndex = 0;
+            this.btnKitapVer.Text = "Kitap Ver";
+            this.btnKitapVer.UseVisualStyleBackColor = true;
+            this.btnKitapVer.Click += new System.EventHandler(this.btnKitapVer_Click);
             // 
             // gridOduncKitaplar
             // 

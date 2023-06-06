@@ -40,7 +40,7 @@ namespace KutuphaneProjesi
             // 
             this.btnKitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKitap.Image = ((System.Drawing.Image)(resources.GetObject("btnKitap.Image")));
-            this.btnKitap.Location = new System.Drawing.Point(31, 32);
+            this.btnKitap.Location = new System.Drawing.Point(20, 23);
             this.btnKitap.Name = "btnKitap";
             this.btnKitap.Size = new System.Drawing.Size(170, 75);
             this.btnKitap.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace KutuphaneProjesi
             // 
             this.btnOgrenci.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOgrenci.Image = ((System.Drawing.Image)(resources.GetObject("btnOgrenci.Image")));
-            this.btnOgrenci.Location = new System.Drawing.Point(230, 32);
+            this.btnOgrenci.Location = new System.Drawing.Point(196, 23);
             this.btnOgrenci.Name = "btnOgrenci";
             this.btnOgrenci.Size = new System.Drawing.Size(170, 75);
             this.btnOgrenci.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace KutuphaneProjesi
             // 
             this.btnTur.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTur.Image = ((System.Drawing.Image)(resources.GetObject("btnTur.Image")));
-            this.btnTur.Location = new System.Drawing.Point(31, 136);
+            this.btnTur.Location = new System.Drawing.Point(20, 104);
             this.btnTur.Name = "btnTur";
             this.btnTur.Size = new System.Drawing.Size(170, 75);
             this.btnTur.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace KutuphaneProjesi
             // 
             this.btnOdunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdunc.Image = ((System.Drawing.Image)(resources.GetObject("btnOdunc.Image")));
-            this.btnOdunc.Location = new System.Drawing.Point(230, 136);
+            this.btnOdunc.Location = new System.Drawing.Point(196, 104);
             this.btnOdunc.Name = "btnOdunc";
             this.btnOdunc.Size = new System.Drawing.Size(170, 75);
             this.btnOdunc.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace KutuphaneProjesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 261);
+            this.ClientSize = new System.Drawing.Size(388, 205);
             this.Controls.Add(this.btnOdunc);
             this.Controls.Add(this.btnTur);
             this.Controls.Add(this.btnOgrenci);
