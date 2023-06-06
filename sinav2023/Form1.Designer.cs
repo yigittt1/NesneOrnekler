@@ -226,7 +226,7 @@ namespace sinav2023
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Ürünler";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
             this.groupBox3.ResumeLayout(false);

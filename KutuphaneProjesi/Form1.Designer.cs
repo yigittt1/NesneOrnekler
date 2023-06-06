@@ -102,6 +102,7 @@ namespace KutuphaneProjesi
             this.Name = "formAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kütühane Projesi";
+            this.Load += new System.EventHandler(this.formAnaSayfa_Load);
             this.ResumeLayout(false);
 
         }

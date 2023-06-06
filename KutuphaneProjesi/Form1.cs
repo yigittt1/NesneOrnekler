@@ -40,5 +40,10 @@ namespace KutuphaneProjesi
             formOduncKitap oduncKitap = new formOduncKitap();
             oduncKitap.ShowDialog();
         }
+
+        private void formAnaSayfa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
