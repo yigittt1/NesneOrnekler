@@ -31,7 +31,7 @@ namespace sinav2023
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.DataGridWiew1 = new System.Windows.Forms.DataGridView();
+            this.gridUrunler = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -47,22 +47,22 @@ namespace sinav2023
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAdet = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridWiew1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DataGridWiew1
+            // gridUrunler
             // 
-            this.DataGridWiew1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridWiew1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridWiew1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DataGridWiew1.Location = new System.Drawing.Point(8, 185);
-            this.DataGridWiew1.Name = "DataGridWiew1";
-            this.DataGridWiew1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridWiew1.Size = new System.Drawing.Size(616, 218);
-            this.DataGridWiew1.TabIndex = 21;
+            this.gridUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridUrunler.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.gridUrunler.Location = new System.Drawing.Point(8, 185);
+            this.gridUrunler.Name = "gridUrunler";
+            this.gridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridUrunler.Size = new System.Drawing.Size(616, 218);
+            this.gridUrunler.TabIndex = 21;
             // 
             // groupBox3
             // 
@@ -221,14 +221,14 @@ namespace sinav2023
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 415);
-            this.Controls.Add(this.DataGridWiew1);
+            this.Controls.Add(this.gridUrunler);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridWiew1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -240,7 +240,7 @@ namespace sinav2023
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DataGridWiew1;
+        private System.Windows.Forms.DataGridView gridUrunler;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
