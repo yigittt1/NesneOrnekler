@@ -32,7 +32,7 @@ namespace sinav2023
             try
             {
                 baglanti = vtIslemleri.baglan();
-                komutSatiri = "SELECT * FROM urunler";
+                komutSatiri = "SELECT * FROM urun";
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(komutSatiri, baglanti);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
@@ -53,7 +53,7 @@ namespace sinav2023
             {
                 if (baglanti.State != ConnectionState.Open)
                 {
-                    komutSatiri = "INSERT INTO ogrenciler (urun_adi,fiyat,adet) VALUES(@adi,@fiyat,@adet)";
+                    komutSatiri = "INSERT INTO urun (urun_adi,fiyat,adet) VALUES(@adi,@fiyat,@adet)";
                     komut = new MySqlCommand(komutSatiri, baglanti);
                     komut.Parameters.AddWithValue("@adet", int.Parse(txtAdet.Text.ToString()));
                     komut.Parameters.AddWithValue("@fiyat", txtFiyat.Text);
@@ -101,7 +101,7 @@ namespace sinav2023
                 {
                     baglanti.Open();
                 }
-                komutSatiri = "DELETE FROM urunler WHERE id = @id";
+                komutSatiri = "DELETE FROM urun WHERE id = @id";
                 komut = new MySqlCommand(komutSatiri, baglanti);
                 komut.Parameters.AddWithValue("@no", gridUrunler.CurrentRow.Cells["id"].Value.ToString());
                 komut.ExecuteNonQuery();
@@ -123,7 +123,7 @@ namespace sinav2023
                 {
                     baglanti.Open();
                 }
-                komutSatiri = "UPDATE urunler SET adet=@adet,fiyat=@fiyat,urun_adi=@urun_adi where id=@id";
+                komutSatiri = "UPDATE urun SET adet=@adet,fiyat=@fiyat,urun_adi=@urun_adi where id=@id";
                 komut = new MySqlCommand(komutSatiri, baglanti);
                 komut.Parameters.AddWithValue("@adet", int.Parse(txtAdet.Text));
                 komut.Parameters.AddWithValue("@fiyat", txtFiyat.Text);
@@ -154,7 +154,7 @@ namespace sinav2023
                 }
                 komut = new MySqlCommand();
                 komut.Connection = baglanti;
-                komut.CommandText = "Selecet * From ogrenciler Where ad LIKE'" + aranacakUrun + "%'";
+                komut.CommandText = "Selecet * From urun Where ad LIKE'" + aranacakUrun + "%'";
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(komut);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
