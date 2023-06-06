@@ -53,18 +53,19 @@ namespace sinav2023
             {
                 if (baglanti.State != ConnectionState.Open)
                 {
-                    komutSatiri = "INSERT INTO urun (urun_adi,fiyat,adet) VALUES(@adi,@fiyat,@adet)";
-                    komut = new MySqlCommand(komutSatiri, baglanti);
-                    komut.Parameters.AddWithValue("@adet", int.Parse(txtAdet.Text.ToString()));
-                    komut.Parameters.AddWithValue("@fiyat", txtFiyat.Text);
-                    komut.Parameters.AddWithValue("@adi", txtUrunAdi.Text);
-
-                    komut.ExecuteNonQuery();
-                    baglanti.Close();
-                    Temizle();
-                    MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Listele();
+                    baglanti.Open();
                 }
+                komutSatiri = "INSERT INTO urun (urun_adi,fiyat,adet) VALUES(@adi,@fiyat,@adet)";
+                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut.Parameters.AddWithValue("@adet", int.Parse(txtAdet.Text.ToString()));
+                komut.Parameters.AddWithValue("@fiyat", txtFiyat.Text);
+                komut.Parameters.AddWithValue("@adi", txtUrunAdi.Text);
+
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                Temizle();
+                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Listele();
             }
             catch (Exception ex)
             {
