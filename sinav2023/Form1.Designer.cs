@@ -34,6 +34,7 @@ namespace sinav2023
             this.DataGridWiew1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnSil = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,7 +47,6 @@ namespace sinav2023
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAdet = new System.Windows.Forms.TextBox();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridWiew1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,6 +89,14 @@ namespace sinav2023
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "kaydet.jpg");
+            this.ımageList1.Images.SetKeyName(1, "sil.png");
+            this.ımageList1.Images.SetKeyName(2, "guncelle.jpg");
             // 
             // btnSil
             // 
@@ -208,14 +216,6 @@ namespace sinav2023
             this.txtAdet.Size = new System.Drawing.Size(130, 20);
             this.txtAdet.TabIndex = 6;
             // 
-            // ımageList1
-            // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "kaydet.jpg");
-            this.ımageList1.Images.SetKeyName(1, "sil.png");
-            this.ımageList1.Images.SetKeyName(2, "guncelle.jpg");
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +227,7 @@ namespace sinav2023
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridWiew1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
