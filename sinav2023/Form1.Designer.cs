@@ -31,38 +31,38 @@ namespace sinav2023
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.gridOgrenci = new System.Windows.Forms.DataGridView();
+            this.DataGridWiew1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtUrunAra = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSoyad = new System.Windows.Forms.TextBox();
-            this.txtNo = new System.Windows.Forms.TextBox();
+            this.txtFiyat = new System.Windows.Forms.TextBox();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtAdet = new System.Windows.Forms.TextBox();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.gridOgrenci)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridWiew1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gridOgrenci
+            // DataGridWiew1
             // 
-            this.gridOgrenci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridOgrenci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridOgrenci.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.gridOgrenci.Location = new System.Drawing.Point(8, 185);
-            this.gridOgrenci.Name = "gridOgrenci";
-            this.gridOgrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridOgrenci.Size = new System.Drawing.Size(616, 218);
-            this.gridOgrenci.TabIndex = 21;
+            this.DataGridWiew1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridWiew1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridWiew1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DataGridWiew1.Location = new System.Drawing.Point(8, 185);
+            this.DataGridWiew1.Name = "DataGridWiew1";
+            this.DataGridWiew1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridWiew1.Size = new System.Drawing.Size(616, 218);
+            this.DataGridWiew1.TabIndex = 21;
             // 
             // groupBox3
             // 
@@ -120,7 +120,7 @@ namespace sinav2023
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtTelefon);
+            this.groupBox2.Controls.Add(this.txtUrunAra);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(8, 104);
             this.groupBox2.Name = "groupBox2";
@@ -129,12 +129,12 @@ namespace sinav2023
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Arama";
             // 
-            // txtTelefon
+            // txtUrunAra
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(76, 30);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(130, 20);
-            this.txtTelefon.TabIndex = 12;
+            this.txtUrunAra.Location = new System.Drawing.Point(76, 30);
+            this.txtUrunAra.Name = "txtUrunAra";
+            this.txtUrunAra.Size = new System.Drawing.Size(130, 20);
+            this.txtUrunAra.TabIndex = 12;
             // 
             // label5
             // 
@@ -148,11 +148,11 @@ namespace sinav2023
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtSoyad);
-            this.groupBox1.Controls.Add(this.txtNo);
+            this.groupBox1.Controls.Add(this.txtFiyat);
+            this.groupBox1.Controls.Add(this.txtUrunAdi);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtAd);
+            this.groupBox1.Controls.Add(this.txtAdet);
             this.groupBox1.Location = new System.Drawing.Point(8, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(616, 91);
@@ -169,19 +169,19 @@ namespace sinav2023
             this.label1.TabIndex = 1;
             this.label1.Text = "Ürün Adı: ";
             // 
-            // txtSoyad
+            // txtFiyat
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(474, 27);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(130, 20);
-            this.txtSoyad.TabIndex = 10;
+            this.txtFiyat.Location = new System.Drawing.Point(474, 27);
+            this.txtFiyat.Name = "txtFiyat";
+            this.txtFiyat.Size = new System.Drawing.Size(130, 20);
+            this.txtFiyat.TabIndex = 10;
             // 
-            // txtNo
+            // txtUrunAdi
             // 
-            this.txtNo.Location = new System.Drawing.Point(76, 27);
-            this.txtNo.Name = "txtNo";
-            this.txtNo.Size = new System.Drawing.Size(130, 20);
-            this.txtNo.TabIndex = 2;
+            this.txtUrunAdi.Location = new System.Drawing.Point(76, 27);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(130, 20);
+            this.txtUrunAdi.TabIndex = 2;
             // 
             // label6
             // 
@@ -201,12 +201,12 @@ namespace sinav2023
             this.label4.TabIndex = 5;
             this.label4.Text = "Adet: ";
             // 
-            // txtAd
+            // txtAdet
             // 
-            this.txtAd.Location = new System.Drawing.Point(269, 27);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(130, 20);
-            this.txtAd.TabIndex = 6;
+            this.txtAdet.Location = new System.Drawing.Point(269, 27);
+            this.txtAdet.Name = "txtAdet";
+            this.txtAdet.Size = new System.Drawing.Size(130, 20);
+            this.txtAdet.TabIndex = 6;
             // 
             // ımageList1
             // 
@@ -221,13 +221,13 @@ namespace sinav2023
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 415);
-            this.Controls.Add(this.gridOgrenci);
+            this.Controls.Add(this.DataGridWiew1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.gridOgrenci)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridWiew1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -239,21 +239,21 @@ namespace sinav2023
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gridOgrenci;
+        private System.Windows.Forms.DataGridView DataGridWiew1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.TextBox txtUrunAra;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSoyad;
-        private System.Windows.Forms.TextBox txtNo;
+        private System.Windows.Forms.TextBox txtFiyat;
+        private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.ImageList ımageList1;
     }
 }
