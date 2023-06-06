@@ -13,7 +13,7 @@ namespace sinav2023
 {
     public partial class Form1 : Form
     {
-        VeriTabaniIslemleri vtIslemleri = new VeriTabaniIslemleri();
+        VeriTabaniİslemleri vtIslemleri = new VeriTabaniİslemleri();
         MySqlConnection baglanti;
         MySqlCommand komut;
         String komutSatiri;
@@ -37,8 +37,8 @@ namespace sinav2023
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
                 gridUrunler.DataSource = dataTable;
-                gridUrunler.Columns["fiyat"].HeaderText = "Fiyat";
                 gridUrunler.Columns["urun_adi"].HeaderText = "Ürün Adı";
+                gridUrunler.Columns["fiyat"].HeaderText = "Fiyat";
                 gridUrunler.Columns["adet"].HeaderText = "Adet";
             }
             catch (Exception ex)
@@ -57,9 +57,9 @@ namespace sinav2023
                 }
                 komutSatiri = "INSERT INTO urun (urun_adi,fiyat,adet) VALUES(@adi,@fiyat,@adet)";
                 komut = new MySqlCommand(komutSatiri, baglanti);
-                komut.Parameters.AddWithValue("@adet", int.Parse(txtAdet.Text.ToString()));
-                komut.Parameters.AddWithValue("@fiyat", txtFiyat.Text);
                 komut.Parameters.AddWithValue("@adi", txtUrunAdi.Text);
+                komut.Parameters.AddWithValue("@fiyat", txtFiyat.Text);
+                komut.Parameters.AddWithValue("@adet", int.Parse(txtAdet.Text.ToString()));
 
                 komut.ExecuteNonQuery();
                 baglanti.Close();
