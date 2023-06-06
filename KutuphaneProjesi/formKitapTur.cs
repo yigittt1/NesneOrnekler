@@ -18,7 +18,7 @@ namespace KutuphaneProjesi
             InitializeComponent();
         }
 
-        VeriTabaniIslemleri vtIslemleri = new VeriTabaniIslemleri();
+        VeriTabaniIslemleri vtİslemler = new VeriTabaniIslemleri();
         MySqlConnection baglanti;
         MySqlCommand komut;
         string komutSatiri;
@@ -27,12 +27,13 @@ namespace KutuphaneProjesi
         {
             TurleriListele();
         }
-        public void TurleriListele()
+
+        private void TurleriListele()
         {
             try
             {
-                baglanti = vtIslemleri.baglan();
-                komutSatiri = "Select * From kitap_turleri";
+                baglanti = vtİslemler.baglan();
+                komutSatiri = "Select * From kitapturleri";
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(komutSatiri, baglanti);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
@@ -40,14 +41,12 @@ namespace KutuphaneProjesi
                 gridKitapTur.Columns["tur_id"].HeaderText = "ID";
                 gridKitapTur.Columns["tur_id"].Width = 100;
                 gridKitapTur.Columns["tur_adi"].HeaderText = "Tür Adı";
-                gridKitapTur.Columns["tur_adi"].Width = 100;
-
+                gridKitapTur.Columns["tur_adi"].Width = 300;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -58,15 +57,17 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut = new MySqlCommand();
                 komut.Connection = baglanti;
-                komut.CommandText = "INSERT INTO kitap_turleri (tur_adi VALUES (@tur_adi)";
+                komut.CommandText = "INSERT INTO kitapturleri (tur_adi) VALUES(@tur_adi)";
                 komut.Parameters.AddWithValue("@tur_adi", txtTurAdi.Text);
 
-                komut.ExecuteNonQuery();
+                komut.ExecuteReader();
                 baglanti.Close();
                 txtTurAdi.Clear();
-                MessageBox.Show("İşlem başarılı","Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                TurleriListele();
             }
             catch (Exception ex)
             {
@@ -94,14 +95,15 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komutSatiri = "DELETE FROM kitap_turleri WHERE tur_id = @tur_id";
-                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut = new MySqlCommand();
+                komut.Connection = baglanti;
+                komut.CommandText = "DELETE FROM kitapturleri WHERE tur_id = @tur_id";
 
-                komut.Parameters.AddWithValue("@tur_id", gridKitapTur.CurrentRow.Cells["tur_id"].Value.ToString());
+                komut.Parameters.AddWithValue("@tur_id", gridKitapTur.CurrentRow.Cells["tur_adi"].Value.ToString());
                 komut.ExecuteNonQuery();
                 baglanti.Close();
                 txtTurAdi.Clear();
-                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TurleriListele();
             }
             catch (Exception ex)
@@ -118,18 +120,16 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut = new MySqlCommand();
                 komut.Connection = baglanti;
-                komut.CommandText = "UPDATE kitap_turleri SET tur_adi=@tur_adi where tur_id=@tur_id";
-
-                komut.Parameters.AddWithValue("@tur_id", int.Parse (gridKitapTur.CurrentRow.Cells["tur_id"].Value.ToString()));
+                komut.CommandText = "UPDATE kitapturleri SET tur_adi=@tur_adi where tur_adi";
+                komut.Parameters.AddWithValue("@tur_adi", int.Parse(gridKitapTur.CurrentRow.Cells["tur_adi"].Value.ToString()));
                 komut.Parameters.AddWithValue("@tur_adi", txtTurAdi.Text);
 
                 komut.ExecuteNonQuery();
                 baglanti.Close();
                 txtTurAdi.Clear();
-
-                MessageBox.Show("İşlem başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 TurleriListele();
             }
@@ -137,7 +137,7 @@ namespace KutuphaneProjesi
             {
                 MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
         }
     }
 }
+

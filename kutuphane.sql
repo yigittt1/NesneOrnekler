@@ -21,49 +21,43 @@ USE `kutuphane`;
 DROP TABLE IF EXISTS `kitaplar`;
 CREATE TABLE IF NOT EXISTS `kitaplar` (
   `kitap_id` int NOT NULL AUTO_INCREMENT,
-  `tur_id` tinyint NOT NULL DEFAULT '0',
-  `kitap_adi` varchar(40) NOT NULL DEFAULT '0',
-  `yazar` varchar(40) NOT NULL DEFAULT '0',
-  `yayinevi` varchar(40) NOT NULL DEFAULT '0',
-  `sayfa_sayisi` smallint NOT NULL DEFAULT '0',
-  PRIMARY KEY (`kitap_id`),
-  KEY `FK_kitaplar_kitap_turleri` (`tur_id`),
-  CONSTRAINT `FK_kitaplar_kitap_turleri` FOREIGN KEY (`tur_id`) REFERENCES `kitap_turleri` (`tur_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `tur_id` tinyint NOT NULL,
+  `kitap_adi` varchar(40) NOT NULL,
+  `yazar` varchar(40) NOT NULL,
+  `yayinevi` varchar(40) NOT NULL,
+  `sayfa_sayisi` smallint NOT NULL,
+  PRIMARY KEY (`kitap_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin5;
 
 -- kutuphane.kitaplar: ~0 rows (yaklaşık) tablosu için veriler indiriliyor
 DELETE FROM `kitaplar`;
 /*!40000 ALTER TABLE `kitaplar` DISABLE KEYS */;
 /*!40000 ALTER TABLE `kitaplar` ENABLE KEYS */;
 
--- tablo yapısı dökülüyor kutuphane.kitap_turleri
-DROP TABLE IF EXISTS `kitap_turleri`;
-CREATE TABLE IF NOT EXISTS `kitap_turleri` (
+-- tablo yapısı dökülüyor kutuphane.kitapturleri
+DROP TABLE IF EXISTS `kitapturleri`;
+CREATE TABLE IF NOT EXISTS `kitapturleri` (
   `tur_id` tinyint NOT NULL AUTO_INCREMENT,
-  `tur_adi` varchar(40) NOT NULL DEFAULT '0',
+  `tur_adi` varchar(40) NOT NULL,
   PRIMARY KEY (`tur_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin5;
 
--- kutuphane.kitap_turleri: ~0 rows (yaklaşık) tablosu için veriler indiriliyor
-DELETE FROM `kitap_turleri`;
-/*!40000 ALTER TABLE `kitap_turleri` DISABLE KEYS */;
-/*!40000 ALTER TABLE `kitap_turleri` ENABLE KEYS */;
+-- kutuphane.kitapturleri: ~0 rows (yaklaşık) tablosu için veriler indiriliyor
+DELETE FROM `kitapturleri`;
+/*!40000 ALTER TABLE `kitapturleri` DISABLE KEYS */;
+/*!40000 ALTER TABLE `kitapturleri` ENABLE KEYS */;
 
 -- tablo yapısı dökülüyor kutuphane.odunc_kitaplar
 DROP TABLE IF EXISTS `odunc_kitaplar`;
 CREATE TABLE IF NOT EXISTS `odunc_kitaplar` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `ogr_no` int DEFAULT NULL,
-  `kitap_id` int DEFAULT NULL,
-  `verilis_tarihi` date DEFAULT NULL,
-  `teslim_tarihi` date DEFAULT NULL,
-  `aciklama` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_odunc_kitaplar_ogrenciler` (`ogr_no`),
-  KEY `FK_odunc_kitaplar_kitaplar` (`kitap_id`),
-  CONSTRAINT `FK_odunc_kitaplar_kitaplar` FOREIGN KEY (`kitap_id`) REFERENCES `kitaplar` (`kitap_id`),
-  CONSTRAINT `FK_odunc_kitaplar_ogrenciler` FOREIGN KEY (`ogr_no`) REFERENCES `ogrenciler` (`ogrenci_no`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ogr_no` int NOT NULL,
+  `kitap_id` int NOT NULL,
+  `verilis_tarihi` date NOT NULL,
+  `teslim_tarihi` date NOT NULL,
+  `aciklama` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin5;
 
 -- kutuphane.odunc_kitaplar: ~0 rows (yaklaşık) tablosu için veriler indiriliyor
 DELETE FROM `odunc_kitaplar`;
@@ -73,14 +67,14 @@ DELETE FROM `odunc_kitaplar`;
 -- tablo yapısı dökülüyor kutuphane.ogrenciler
 DROP TABLE IF EXISTS `ogrenciler`;
 CREATE TABLE IF NOT EXISTS `ogrenciler` (
-  `ogrenci_no` int NOT NULL AUTO_INCREMENT,
-  `ad` varchar(25) DEFAULT NULL,
-  `soyad` varchar(25) DEFAULT NULL,
-  `sinif` tinyint DEFAULT NULL,
-  `cinsiyet` varchar(7) DEFAULT NULL,
-  `telefon` varchar(12) DEFAULT NULL,
+  `ogrenci_no` int NOT NULL,
+  `ad` varchar(25) NOT NULL,
+  `soyad` varchar(25) NOT NULL,
+  `sinif` tinyint NOT NULL,
+  `cinsiyet` varchar(7) NOT NULL,
+  `telefon` varchar(12) NOT NULL,
   PRIMARY KEY (`ogrenci_no`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin5;
 
 -- kutuphane.ogrenciler: ~0 rows (yaklaşık) tablosu için veriler indiriliyor
 DELETE FROM `ogrenciler`;

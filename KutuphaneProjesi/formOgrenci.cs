@@ -39,12 +39,11 @@ namespace KutuphaneProjesi
                 dataAdapter.Fill(dataTable);
                 gridOgrenci.DataSource = dataTable;
                 gridOgrenci.Columns["ogrenci_no"].HeaderText = "Öğrenci Numarası";
-                gridOgrenci.Columns["ad"].HeaderText = "Ad";
-                gridOgrenci.Columns["soyad"].HeaderText = "Soyad";
-                gridOgrenci.Columns["sinif"].HeaderText = "Sınıf";
-                gridOgrenci.Columns["cinsiyet"].HeaderText = "Cinsiyet";
-                gridOgrenci.Columns["telefon"].HeaderText = "Telefon";
-
+                gridOgrenci.Columns["ad"].HeaderText = "Adı";
+                gridOgrenci.Columns["soyad"].HeaderText = "Soyadı";
+                gridOgrenci.Columns["sinif"].HeaderText = "Sınıfı";
+                gridOgrenci.Columns["cinsiyet"].HeaderText = "Cinsiyeti";
+                gridOgrenci.Columns["telefon"].HeaderText = "Telefonu";
             }
             catch (Exception e)
             {
@@ -60,14 +59,13 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komutSatiri = "INSERT INTO  ogrenciler ( ogrenci_no,ad,soyad,sinif,cinsiyet,telefon) VALUES(@no,@ad,@soyad,@sinif,@cinsiyet,@telefon)";
+                komutSatiri = "INSERT INTO ogrenciler (ogrenci_no, ad, soyad, sinif, cinsiyet, telefon) VALUES(@no, @ad, @soyad, @sinif, @cinsiyet @telefon)";
                 komut = new MySqlCommand(komutSatiri, baglanti);
                 komut.Parameters.AddWithValue("@no", int.Parse(txtNo.Text));
-                komut.Parameters.AddWithValue("@ad", (txtAd.Text));
-                komut.Parameters.AddWithValue("@soyad", (txtSoyad.Text));
+                komut.Parameters.AddWithValue("@ad", txtAd.Text);
+                komut.Parameters.AddWithValue("@soyad", txtSoyad.Text);
                 komut.Parameters.AddWithValue("@sinif", int.Parse(comboSinif.SelectedItem.ToString()));
-                komut.Parameters.AddWithValue("@cinsiyet", (comboCinsiyet.SelectedItem.ToString()));
-                komut.Parameters.AddWithValue("@telefon", (txtTelefon.Text));
+                komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
 
                 komut.ExecuteNonQuery();
                 baglanti.Close();
@@ -81,11 +79,12 @@ namespace KutuphaneProjesi
             }
         }
 
+
         private void Temizle()
         {
             txtAd.Clear();
-            txtNo.Clear();
             txtSoyad.Clear();
+            txtNo.Clear();
             txtTelefon.Clear();
         }
 
@@ -104,6 +103,7 @@ namespace KutuphaneProjesi
             {
                 MessageBox.Show("Hata Oluştu", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -120,8 +120,7 @@ namespace KutuphaneProjesi
                 komut.ExecuteNonQuery();
                 baglanti.Close();
                 Temizle();
-                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Listele();
+                MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -137,18 +136,18 @@ namespace KutuphaneProjesi
                 {
                     baglanti.Open();
                 }
-                komutSatiri = " UPDATE  ogrenciler SET ad=@ad,soyad=@soyad,sinif=@sinif,cinsiyet=@cinsiyet,telefon=@telefon where ogrenci_no=@no";
-                komut.Parameters.AddWithValue("@no", int.Parse(txtNo.Text));
-                komut.Parameters.AddWithValue("@ad", (txtAd.Text));
-                komut.Parameters.AddWithValue("@soyad", (txtSoyad.Text));
+                komutSatiri = "UPDATE ogrenciler SET ad=@ad, soyad=@soyad, sinif=@sinif, cinsiyet=@cinsiyet, telefon=@telefon where ogrenci_no=@no";
+                komut = new MySqlCommand(komutSatiri, baglanti);
+                komut.Parameters.AddWithValue("@no", int.Parse(gridOgrenci.CurrentRow.Cells["ogrenci_no"].Value.ToString()));
+                komut.Parameters.AddWithValue("@ad", txtAd.Text);
+                komut.Parameters.AddWithValue("@soyad", txtSoyad.Text);
                 komut.Parameters.AddWithValue("@sinif", int.Parse(comboSinif.SelectedItem.ToString()));
-                komut.Parameters.AddWithValue("@cinsiyet", (comboCinsiyet.SelectedItem.ToString()));
-                komut.Parameters.AddWithValue("@telefon", (txtTelefon.Text));
+                komut.Parameters.AddWithValue("@cinsiyet", comboCinsiyet.SelectedItem.ToString());
+                komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
                 Temizle();
                 MessageBox.Show("İşlem Başarılı", "Mesaj", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Listele();
             }
             catch (Exception ex)
             {
@@ -161,7 +160,7 @@ namespace KutuphaneProjesi
             OgrenciArama(txtAramaOgrenci.Text);
         }
 
-        public void OgrenciArama(string aranacakKeliime)
+        public void OgrenciArama(string aranacakKelime)
         {
             try
             {
@@ -171,7 +170,7 @@ namespace KutuphaneProjesi
                 }
                 komut = new MySqlCommand();
                 komut.Connection = baglanti;
-                komut.CommandText = "Select * From ogrenciler Where ad LIKE '" + aranacakKeliime + "%'";
+                komut.CommandText = "Selecet * From ogrenciler Where ad LIKE'"+ aranacakKelime + "%'";
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(komut);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
@@ -180,7 +179,8 @@ namespace KutuphaneProjesi
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message,"Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
             }
         }
     }
