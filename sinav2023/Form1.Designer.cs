@@ -63,6 +63,7 @@ namespace sinav2023
             this.gridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridUrunler.Size = new System.Drawing.Size(616, 218);
             this.gridUrunler.TabIndex = 21;
+            this.gridUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridUrunler_CellClick);
             // 
             // groupBox3
             // 
@@ -89,6 +90,7 @@ namespace sinav2023
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // ımageList1
             // 
@@ -111,6 +113,7 @@ namespace sinav2023
             this.btnSil.Text = "Sil";
             this.btnSil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnKaydet
             // 
@@ -125,6 +128,7 @@ namespace sinav2023
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // groupBox2
             // 
@@ -143,6 +147,7 @@ namespace sinav2023
             this.txtUrunAra.Name = "txtUrunAra";
             this.txtUrunAra.Size = new System.Drawing.Size(130, 20);
             this.txtUrunAra.TabIndex = 12;
+            this.txtUrunAra.TextChanged += new System.EventHandler(this.txtUrunAra_TextChanged);
             // 
             // label5
             // 
